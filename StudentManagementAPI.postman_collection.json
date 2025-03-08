@@ -1,0 +1,87 @@
+{
+  "info": {
+    "_postman_id": "your-generated-id",
+    "name": "Student Grade Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/STUDENT-GRADE-MANAGEMENT-API/app/public/index.php",
+          "protocol": "http",
+          "host": ["localhost"],
+          "path": ["STUDENT-GRADE-MANAGEMENT-API", "app", "public", "index.php"]
+        }
+      }
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/STUDENT-GRADE-MANAGEMENT-API/app/public/index.php?id=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "path": ["STUDENT-GRADE-MANAGEMENT-API", "app", "public", "index.php"],
+          "query": [{ "key": "id", "value": "1" }]
+        }
+      }
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"midterm_score\": 85.5,\n  \"finals_score\": 90.0\n}"
+        },
+        "url": {
+          "raw": "http://localhost/STUDENT-GRADE-MANAGEMENT-API/app/public/index.php",
+          "protocol": "http",
+          "host": ["localhost"],
+          "path": ["STUDENT-GRADE-MANAGEMENT-API", "app", "public", "index.php"]
+        }
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"midterm_score\": 88.0,\n  \"finals_score\": 92.0\n}"
+        },
+        "url": {
+          "raw": "http://localhost/STUDENT-GRADE-MANAGEMENT-API/app/public/index.php",
+          "protocol": "http",
+          "host": ["localhost"],
+          "path": ["STUDENT-GRADE-MANAGEMENT-API", "app", "public", "index.php"]
+        }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost/STUDENT-GRADE-MANAGEMENT-API/app/public/index.php",
+          "protocol": "http",
+          "host": ["localhost"],
+          "path": ["STUDENT-GRADE-MANAGEMENT-API", "app", "public", "index.php"]
+        }
+      }
+    }
+  ]
+}
